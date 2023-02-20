@@ -6,13 +6,13 @@ class FoodsModel {
   String text;
   List parsed;
   List<Hints> hints;
-  Next next;
+  // Next next;
 
   FoodsModel({
       required this.text,
       required this.parsed,
       required this.hints,
-      required this.next,
+      // required this.next,
     });
 
   factory FoodsModel.fromJson(Map<String, dynamic> jsonData) {
@@ -20,7 +20,7 @@ class FoodsModel {
         text: jsonData['text'] ?? '',
         parsed: jsonData['parsed'] ?? [],
         hints: (jsonData['hints'] as List).map((json) => Hints.fromJson(json)).toList(),
-        next: Next.fromJson(jsonData['next'])
+        // next: Next.fromJson(jsonData['next'])
         );
   }
 }
